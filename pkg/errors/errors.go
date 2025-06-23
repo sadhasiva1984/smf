@@ -3,7 +3,7 @@ package errors
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi/models"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 var (

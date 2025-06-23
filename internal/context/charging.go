@@ -1,7 +1,7 @@
 package context
 
 import (
-	"github.com/free5gc/openapi/models"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 type ChargingLevel uint8

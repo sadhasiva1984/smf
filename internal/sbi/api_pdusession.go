@@ -7,9 +7,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/openapi"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 func (s *Server) getPDUSessionRoutes() []Route {

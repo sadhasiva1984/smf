@@ -6,10 +6,10 @@ import (
 	"fmt"
 
 	"github.com/free5gc/aper"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/pfcp/pfcpType"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/ngap/ngapType"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 func strNgapCause(cause *ngapType.Cause) string {

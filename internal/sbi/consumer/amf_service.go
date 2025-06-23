@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/free5gc/openapi/amf/Communication"
-	"github.com/free5gc/openapi/models"
+	"github.com/sadhasiva1984/openapi/amf/Communication"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 type namfService struct {

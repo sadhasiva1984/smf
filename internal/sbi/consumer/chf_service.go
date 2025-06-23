@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/free5gc/nas/nasConvert"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/chf/ConvergedCharging"
-	"github.com/free5gc/openapi/models"
 	smf_context "github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/nas/nasConvert"
+	"github.com/sadhasiva1984/openapi"
+	"github.com/sadhasiva1984/openapi/chf/ConvergedCharging"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 type nchfService struct {

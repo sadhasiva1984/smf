@@ -11,12 +11,12 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/oauth"
 	"github.com/free5gc/pfcp/pfcpType"
 	"github.com/free5gc/smf/internal/logger"
 	"github.com/free5gc/smf/pkg/factory"
 	"github.com/free5gc/util/idgenerator"
+	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/openapi/oauth"
 )
 
 func Init() {
@@ -24,7 +24,7 @@ func Init() {
 }
 
 type NFContext interface {
-	AuthorizationCheck(token string, serviceName models.ServiceName) error
+	AuthorizationCheck(token string, serviceName models.ServiceName, ServingPlmnID models.PlmnId, RoamingPlmnID models.PlmnId) error
 }
 
 var _ NFContext = &SMFContext{}
@@ -60,6 +60,7 @@ type SMFContext struct {
 	AssocFailAlertInterval time.Duration
 	AssocFailRetryInterval time.Duration
 	OAuth2Required         bool
+	Roaming                *factory.Roaming `yaml:"roaming,omitempty"`
 
 	UserPlaneInformation  *UserPlaneInformation
 	PfcpContext           context.Context
@@ -290,6 +291,19 @@ func InitSMFUERouting(routingConfig *factory.RoutingConfig) {
 	}
 }
 
+func (context *SMFContext) GetServingPlmnID() *models.PlmnId {
+	if context.Roaming != nil {
+		return context.Roaming.ServingPlmnID
+	}
+	return nil
+}
+
+func (context *SMFContext) GetRoamingPlmnID() *models.PlmnId {
+	if context.Roaming != nil {
+		return context.Roaming.RoamingPlmnID
+	}
+	return nil
+}
 func GetSelf() *SMFContext {
 	return &smfContext
 }
@@ -312,9 +326,9 @@ func (c *SMFContext) GetTokenCtx(serviceName models.ServiceName, targetNF models
 		c.NfInstanceID, c.NrfUri, string(serviceName))
 }
 
-func (c *SMFContext) AuthorizationCheck(token string, serviceName models.ServiceName) error {
+func (c *SMFContext) AuthorizationCheck(token string, serviceName models.ServiceName, ServingPlmnID models.PlmnId, RoamingPlmnID models.PlmnId) error {
 	if !c.OAuth2Required {
 		return nil
 	}
-	return oauth.VerifyOAuth(token, string(serviceName), c.NrfCertPem)
+	return oauth.VerifyOAuth(token, string(serviceName), c.NrfCertPem, &RoamingPlmnID, &ServingPlmnID)
 }

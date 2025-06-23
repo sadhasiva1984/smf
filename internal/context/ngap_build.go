@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/free5gc/aper"
-	"github.com/free5gc/ngap/ngapConvert"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
+	"github.com/sadhasiva1984/ngap/ngapConvert"
+	"github.com/sadhasiva1984/ngap/ngapType"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 const DefaultNonGBR5QI = 9

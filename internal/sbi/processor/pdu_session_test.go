@@ -14,11 +14,6 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/free5gc/nas"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/nasType"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	smf_context "github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/smf/internal/pfcp"
 	"github.com/free5gc/smf/internal/pfcp/udp"
@@ -28,6 +23,11 @@ import (
 	"github.com/free5gc/smf/pkg/factory"
 	"github.com/free5gc/smf/pkg/service"
 	"github.com/free5gc/util/httpwrapper"
+	"github.com/sadhasiva1984/nas"
+	"github.com/sadhasiva1984/nas/nasMessage"
+	"github.com/sadhasiva1984/nas/nasType"
+	"github.com/sadhasiva1984/openapi"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 var userPlaneConfig = factory.UserPlaneInformation{

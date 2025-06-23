@@ -14,8 +14,8 @@ import (
 	"github.com/asaskevich/govalidator"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 const (
@@ -43,6 +43,11 @@ type Config struct {
 	Configuration *Configuration `yaml:"configuration" valid:"required"`
 	Logger        *Logger        `yaml:"logger" valid:"required"`
 	sync.RWMutex
+}
+
+type Roaming struct {
+	ServingPlmnID *models.PlmnId `yaml:"servingPlmnID" valid:"required"`
+	RoamingPlmnID *models.PlmnId `yaml:"roamingPlmnID" valid:"required"`
 }
 
 func (c *Config) Validate() (bool, error) {
@@ -92,6 +97,7 @@ type Configuration struct {
 	T3592                *TimerValue          `yaml:"t3592" valid:"required"`
 	NwInstFqdnEncoding   bool                 `yaml:"nwInstFqdnEncoding" valid:"type(bool),optional"`
 	RequestedUnit        int32                `yaml:"requestedUnit,omitempty" valid:"optional"`
+	Roaming              *Roaming             `yaml:"roaming,omitempty" valid:"optional"`
 }
 
 type Logger struct {
@@ -128,6 +134,44 @@ func (c *Configuration) validate() (bool, error) {
 			err := errors.New("Invalid serviceNameList[" + strconv.Itoa(index) + "]: " +
 				serviceName + ", should be nsmf-pdusession, nsmf-event-exposure or nsmf-oam.")
 			return false, err
+		}
+	}
+
+	if c.Roaming != nil {
+		var errs govalidator.Errors
+
+		// Validate ServingPlmnID
+		if c.Roaming.ServingPlmnID != nil {
+			mcc := c.Roaming.ServingPlmnID.Mcc
+			if result := govalidator.StringMatches(mcc, "^[0-9]{3}$"); !result {
+				err := fmt.Errorf("invalid serving mcc: %s, should be a 3-digit number", mcc)
+				errs = append(errs, err)
+			}
+
+			mnc := c.Roaming.ServingPlmnID.Mnc
+			if result := govalidator.StringMatches(mnc, "^[0-9]{2,3}$"); !result {
+				err := fmt.Errorf("invalid serving mnc: %s, should be a 2 or 3-digit number", mnc)
+				errs = append(errs, err)
+			}
+		}
+
+		// Validate RoamingPlmnID
+		if c.Roaming.RoamingPlmnID != nil {
+			mcc := c.Roaming.RoamingPlmnID.Mcc
+			if result := govalidator.StringMatches(mcc, "^[0-9]{3}$"); !result {
+				err := fmt.Errorf("invalid roaming mcc: %s, should be a 3-digit number", mcc)
+				errs = append(errs, err)
+			}
+
+			mnc := c.Roaming.RoamingPlmnID.Mnc
+			if result := govalidator.StringMatches(mnc, "^[0-9]{2,3}$"); !result {
+				err := fmt.Errorf("invalid roaming mnc: %s, should be a 2 or 3-digit number", mnc)
+				errs = append(errs, err)
+			}
+		}
+
+		if len(errs) > 0 {
+			return false, error(errs)
 		}
 	}
 

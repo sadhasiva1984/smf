@@ -7,11 +7,11 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/pfcp/pfcpType"
 	"github.com/free5gc/smf/internal/logger"
 	"github.com/free5gc/smf/internal/util"
 	"github.com/free5gc/smf/pkg/factory"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 // Refer to TS 23.501 5.7.4

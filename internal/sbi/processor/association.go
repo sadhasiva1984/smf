@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/pfcp"
 	"github.com/free5gc/pfcp/pfcpType"
 	smf_context "github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/smf/internal/logger"
 	"github.com/free5gc/smf/internal/pfcp/message"
+	"github.com/sadhasiva1984/nas/nasMessage"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 func (p *Processor) ToBeAssociatedWithUPF(smfPfcpContext context.Context, upf *smf_context.UPF) {

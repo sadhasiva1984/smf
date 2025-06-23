@@ -5,24 +5,41 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/free5gc/openapi/models"
 	smf_context "github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 type RouterAuthorizationCheck struct {
-	serviceName models.ServiceName
+	serviceName   models.ServiceName
+	ServingPlmnID models.PlmnId
+	RoamingPlmnID models.PlmnId
 }
 
 func NewRouterAuthorizationCheck(serviceName models.ServiceName) *RouterAuthorizationCheck {
+	smfContext := smf_context.GetSelf()
+
+	var servingPlmnID, roamingPlmnID models.PlmnId
+
+	if smfContext.Roaming != nil {
+		if smfContext.Roaming.ServingPlmnID != nil {
+			servingPlmnID = *smfContext.Roaming.ServingPlmnID
+		}
+		if smfContext.Roaming.RoamingPlmnID != nil {
+			roamingPlmnID = *smfContext.Roaming.RoamingPlmnID
+		}
+	}
+
 	return &RouterAuthorizationCheck{
-		serviceName: serviceName,
+		serviceName:   serviceName,
+		ServingPlmnID: servingPlmnID,
+		RoamingPlmnID: roamingPlmnID,
 	}
 }
 
 func (rac *RouterAuthorizationCheck) Check(c *gin.Context, smfContext smf_context.NFContext) {
 	token := c.Request.Header.Get("Authorization")
-	err := smfContext.AuthorizationCheck(token, rac.serviceName)
+	err := smfContext.AuthorizationCheck(token, rac.serviceName, rac.ServingPlmnID, rac.RoamingPlmnID)
 	if err != nil {
 		logger.UtilLog.Debugf("RouterAuthorizationCheck: Check Unauthorized: %s", err.Error())
 		c.JSON(http.StatusUnauthorized, gin.H{"error": err.Error()})

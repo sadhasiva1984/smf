@@ -3,13 +3,13 @@ package processor
 import (
 	"fmt"
 
-	"github.com/free5gc/nas"
-	"github.com/free5gc/nas/nasConvert"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/nasType"
-	"github.com/free5gc/openapi/models"
 	smf_context "github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/nas"
+	"github.com/sadhasiva1984/nas/nasConvert"
+	"github.com/sadhasiva1984/nas/nasMessage"
+	"github.com/sadhasiva1984/nas/nasType"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 type GSMError struct {

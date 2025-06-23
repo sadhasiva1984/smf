@@ -8,8 +8,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/smf/internal/util/oauth"
+	"github.com/sadhasiva1984/openapi/models"
 )
 
 const (
@@ -23,7 +23,7 @@ func newMockSMFContext() *mockSMFContext {
 	return &mockSMFContext{}
 }
 
-func (m *mockSMFContext) AuthorizationCheck(token string, serviceName models.ServiceName) error {
+func (m *mockSMFContext) AuthorizationCheck(token string, serviceName models.ServiceName, ServingPlmnID models.PlmnId, RoamingPlmnID models.PlmnId) error {
 	if token == Valid {
 		return nil
 	}
