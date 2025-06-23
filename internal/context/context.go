@@ -166,7 +166,9 @@ func InitSmfContext(config *factory.Config) {
 			}
 		}
 	}
-
+	if configuration.Roaming != nil {
+		smfContext.Roaming = configuration.Roaming
+	}
 	if configuration.NrfUri != "" {
 		smfContext.NrfUri = configuration.NrfUri
 	} else {
