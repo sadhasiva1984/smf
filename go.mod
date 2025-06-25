@@ -14,7 +14,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sadhasiva1984/nas v1.0.0
 	github.com/sadhasiva1984/ngap v1.0.0
-	github.com/sadhasiva1984/openapi v1.2.0
+	github.com/sadhasiva1984/openapi v1.2.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/smartystreets/goconvey v1.8.1
 	github.com/stretchr/testify v1.9.0

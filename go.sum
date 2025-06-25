@@ -100,8 +100,8 @@ github.com/sadhasiva1984/nas v1.0.0 h1:pFT+W/pCKZx7qRlofV9YuLezklTHVDVIXCsuklbR8
 github.com/sadhasiva1984/nas v1.0.0/go.mod h1:kYhoKOtC1ch6PIoBDrRTb4CNxCXzvHxPQx5Khe5ECwY=
 github.com/sadhasiva1984/ngap v1.0.0 h1:hekto8FH4xLw2jZpN5YJu4haPffg4VUzjSBttBw5sOw=
 github.com/sadhasiva1984/ngap v1.0.0/go.mod h1:l/MO74745MdkDsH2BPmvwBzMdzphtAKKC97w/IveXyQ=
-github.com/sadhasiva1984/openapi v1.2.0 h1:ISYF/rkbdXqXMgTyTZoNRvSOHCL4ziZGx9cr/OZBWN0=
-github.com/sadhasiva1984/openapi v1.2.0/go.mod h1:Rfz9edPyAd+nKfs0RnPEnbRPjgeEHSV2S7wPNPLrlDM=
+github.com/sadhasiva1984/openapi v1.2.1 h1:zA7ea48yAlDj2y2B49/xtbuhj09yVwzprlWSpkbx+4U=
+github.com/sadhasiva1984/openapi v1.2.1/go.mod h1:Rfz9edPyAd+nKfs0RnPEnbRPjgeEHSV2S7wPNPLrlDM=
 github.com/shurcooL/sanitized_anchor_name v1.0.0 h1:PdmoCO6wvbs+7yrJyMORt4/BmY5IYyJwS/kOiWx8mHo=
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/sirupsen/logrus v1.9.3 h1:dueUQJ1C2q9oE3F7wvmSGAaVtTmUizReu6fjN8uqzbQ=

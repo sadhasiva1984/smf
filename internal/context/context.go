@@ -325,7 +325,7 @@ func (c *SMFContext) GetTokenCtx(serviceName models.ServiceName, targetNF models
 		return context.TODO(), nil, nil
 	}
 	return oauth.GetTokenCtx(models.NrfNfManagementNfType_SMF, targetNF,
-		c.NfInstanceID, c.NrfUri, string(serviceName))
+		c.NfInstanceID, c.NrfUri, string(serviceName), c.GetServingPlmnID(), c.GetServingPlmnID())
 }
 
 func (c *SMFContext) AuthorizationCheck(token string, serviceName models.ServiceName, ServingPlmnID models.PlmnId, RoamingPlmnID models.PlmnId) error {
