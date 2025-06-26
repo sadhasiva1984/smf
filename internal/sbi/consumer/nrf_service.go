@@ -297,6 +297,7 @@ func (s *nnrfService) SendNFDiscoveryUDM() (*models.ProblemDetails, error) {
 
 		var client *SubscriberDataManagement.APIClient
 		for _, service := range smfContext.UDMProfile.NfServices {
+			logger.ConsumerLog.Tracef("SendNFDiscoveryUDM:", service.ServiceName, service.NfServiceStatus, service.ApiPrefix, service.ServiceInstanceId)
 			if service.ServiceName == models.ServiceName_NUDM_SDM {
 				client = s.consumer.nudmService.getSubscribeDataManagementClient(service.ApiPrefix)
 			}

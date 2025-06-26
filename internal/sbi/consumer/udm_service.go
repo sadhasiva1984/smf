@@ -185,6 +185,7 @@ func (s *nudmService) GetSmData(ctx context.Context, supi string,
 ) {
 	var client *SubscriberDataManagement.APIClient
 	for _, service := range s.consumer.Context().UDMProfile.NfServices {
+		logger.PduSessLog.Tracef("GetSmData:", service.ServiceName, service.NfServiceStatus, service.ApiPrefix, service.ServiceInstanceId)
 		if service.ServiceName == models.ServiceName_NUDM_SDM {
 			client = s.getSubscribeDataManagementClient(service.ApiPrefix)
 			if client != nil {
