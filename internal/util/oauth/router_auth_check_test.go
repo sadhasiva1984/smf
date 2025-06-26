@@ -8,8 +8,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/smf/internal/util/oauth"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/util/oauth"
 )
 
 const (

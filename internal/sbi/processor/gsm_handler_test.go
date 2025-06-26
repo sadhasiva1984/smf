@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/free5gc/smf/internal/context"
 	"github.com/free5gc/util/idgenerator"
 	"github.com/sadhasiva1984/nas/nasType"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/context"
 )
 
 func TestBuildNASPacketFilterFromPacketFilterInfo(t *testing.T) {

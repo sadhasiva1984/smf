@@ -14,8 +14,8 @@ import (
 	"github.com/asaskevich/govalidator"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/free5gc/smf/internal/logger"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 const (

@@ -6,8 +6,8 @@ import (
 
 	"github.com/free5gc/pfcp"
 	"github.com/free5gc/pfcp/pfcpType"
-	"github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/pfcp/udp"
+	"github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/pfcp/udp"
 )
 
 func BuildPfcpAssociationSetupRequest() (pfcp.PFCPAssociationSetupRequest, error) {

@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/free5gc/pfcp/pfcpType"
-	"github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/pfcp/message"
-	"github.com/free5gc/smf/internal/pfcp/udp"
-	"github.com/free5gc/smf/pkg/factory"
+	"github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/pfcp/message"
+	"github.com/sadhasiva1984/smf/internal/pfcp/udp"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 var testConfig = factory.Config{

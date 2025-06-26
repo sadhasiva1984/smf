@@ -1,7 +1,6 @@
 package consumer
 
 import (
-	"github.com/free5gc/smf/pkg/app"
 	"github.com/sadhasiva1984/openapi/amf/Communication"
 	"github.com/sadhasiva1984/openapi/chf/ConvergedCharging"
 	"github.com/sadhasiva1984/openapi/nrf/NFDiscovery"
@@ -10,6 +9,7 @@ import (
 	"github.com/sadhasiva1984/openapi/smf/PDUSession"
 	"github.com/sadhasiva1984/openapi/udm/SubscriberDataManagement"
 	"github.com/sadhasiva1984/openapi/udm/UEContextManagement"
+	"github.com/sadhasiva1984/smf/pkg/app"
 )
 
 type Consumer struct {

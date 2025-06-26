@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/pkg/factory"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 func (s *Server) getUPIRoutes() []Route {

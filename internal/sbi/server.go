@@ -10,16 +10,16 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/logger"
-	"github.com/free5gc/smf/internal/sbi/consumer"
-	"github.com/free5gc/smf/internal/sbi/processor"
-	util_oauth "github.com/free5gc/smf/internal/util/oauth"
-	"github.com/free5gc/smf/pkg/app"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/free5gc/util/httpwrapper"
 	logger_util "github.com/free5gc/util/logger"
 	"github.com/sadhasiva1984/openapi/models"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/logger"
+	"github.com/sadhasiva1984/smf/internal/sbi/consumer"
+	"github.com/sadhasiva1984/smf/internal/sbi/processor"
+	util_oauth "github.com/sadhasiva1984/smf/internal/util/oauth"
+	"github.com/sadhasiva1984/smf/pkg/app"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 const (

@@ -9,15 +9,15 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/logger"
-	"github.com/free5gc/smf/internal/sbi"
-	"github.com/free5gc/smf/internal/sbi/consumer"
-	"github.com/free5gc/smf/internal/sbi/processor"
-	"github.com/free5gc/smf/pkg/app"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/sadhasiva1984/openapi"
 	"github.com/sadhasiva1984/openapi/nrf/NFManagement"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/logger"
+	"github.com/sadhasiva1984/smf/internal/sbi"
+	"github.com/sadhasiva1984/smf/internal/sbi/consumer"
+	"github.com/sadhasiva1984/smf/internal/sbi/processor"
+	"github.com/sadhasiva1984/smf/pkg/app"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 type SmfAppInterface interface {

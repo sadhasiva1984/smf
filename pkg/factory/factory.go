@@ -11,7 +11,7 @@ import (
 	"github.com/asaskevich/govalidator"
 	"gopkg.in/yaml.v2"
 
-	"github.com/free5gc/smf/internal/logger"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 var (

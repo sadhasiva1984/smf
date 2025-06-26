@@ -3,11 +3,11 @@ package context
 import (
 	"encoding/hex"
 
-	"github.com/free5gc/smf/internal/logger"
 	"github.com/sadhasiva1984/nas"
 	"github.com/sadhasiva1984/nas/nasConvert"
 	"github.com/sadhasiva1984/nas/nasMessage"
 	"github.com/sadhasiva1984/nas/nasType"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 func BuildGSMPDUSessionEstablishmentAccept(smContext *SMContext) ([]byte, error) {

@@ -14,20 +14,20 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/pfcp"
-	"github.com/free5gc/smf/internal/pfcp/udp"
-	"github.com/free5gc/smf/internal/sbi/consumer"
-	"github.com/free5gc/smf/internal/sbi/processor"
-	PDUSession_errors "github.com/free5gc/smf/pkg/errors"
-	"github.com/free5gc/smf/pkg/factory"
-	"github.com/free5gc/smf/pkg/service"
 	"github.com/free5gc/util/httpwrapper"
 	"github.com/sadhasiva1984/nas"
 	"github.com/sadhasiva1984/nas/nasMessage"
 	"github.com/sadhasiva1984/nas/nasType"
 	"github.com/sadhasiva1984/openapi"
 	"github.com/sadhasiva1984/openapi/models"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/pfcp"
+	"github.com/sadhasiva1984/smf/internal/pfcp/udp"
+	"github.com/sadhasiva1984/smf/internal/sbi/consumer"
+	"github.com/sadhasiva1984/smf/internal/sbi/processor"
+	PDUSession_errors "github.com/sadhasiva1984/smf/pkg/errors"
+	"github.com/sadhasiva1984/smf/pkg/factory"
+	"github.com/sadhasiva1984/smf/pkg/service"
 )
 
 var userPlaneConfig = factory.UserPlaneInformation{

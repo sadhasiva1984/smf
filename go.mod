@@ -1,4 +1,4 @@
-module github.com/free5gc/smf
+module github.com/sadhasiva1984/smf
 
 go 1.21
 

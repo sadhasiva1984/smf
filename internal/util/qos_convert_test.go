@@ -3,7 +3,7 @@ package util_test
 import (
 	"testing"
 
-	"github.com/free5gc/smf/internal/util"
+	"github.com/sadhasiva1984/smf/internal/util"
 )
 
 func TestBitRateToKbpsWithValidBpsBitRateShouldReturnValidKbpsBitRate(t *testing.T) {

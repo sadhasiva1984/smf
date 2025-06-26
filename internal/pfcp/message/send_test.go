@@ -8,10 +8,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	smf_pfcp "github.com/free5gc/smf/internal/pfcp"
-	"github.com/free5gc/smf/internal/pfcp/message"
-	"github.com/free5gc/smf/internal/pfcp/udp"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	smf_pfcp "github.com/sadhasiva1984/smf/internal/pfcp"
+	"github.com/sadhasiva1984/smf/internal/pfcp/message"
+	"github.com/sadhasiva1984/smf/internal/pfcp/udp"
 )
 
 func TestSendPfcpAssociationSetupRequest(t *testing.T) {

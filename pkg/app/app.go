@@ -1,8 +1,8 @@
 package app
 
 import (
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/pkg/factory"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 type App interface {

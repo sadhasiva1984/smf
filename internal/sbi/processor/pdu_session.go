@@ -12,15 +12,15 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/free5gc/pfcp/pfcpType"
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/logger"
-	smf_errors "github.com/free5gc/smf/pkg/errors"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/sadhasiva1984/nas"
 	"github.com/sadhasiva1984/nas/nasMessage"
 	"github.com/sadhasiva1984/openapi"
 	"github.com/sadhasiva1984/openapi/models"
 	"github.com/sadhasiva1984/openapi/udm/SubscriberDataManagement"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/logger"
+	smf_errors "github.com/sadhasiva1984/smf/pkg/errors"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 func (p *Processor) HandlePDUSessionSMContextCreate(

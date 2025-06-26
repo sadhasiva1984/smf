@@ -14,11 +14,11 @@ import (
 
 	"github.com/free5gc/pfcp/pfcpType"
 	"github.com/free5gc/pfcp/pfcpUdp"
-	"github.com/free5gc/smf/internal/logger"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/free5gc/util/idgenerator"
 	"github.com/sadhasiva1984/nas/nasMessage"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/logger"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 var upfPool sync.Map

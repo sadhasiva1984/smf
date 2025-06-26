@@ -1,7 +1,7 @@
 package processor
 
 import (
-	smf_context "github.com/free5gc/smf/internal/context"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
 )
 
 func (p *Processor) RemoveSMContextFromAllNF(smContext *smf_context.SMContext, sendNotification bool) {

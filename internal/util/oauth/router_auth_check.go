@@ -5,9 +5,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/logger"
 	"github.com/sadhasiva1984/openapi/models"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 type RouterAuthorizationCheck struct {

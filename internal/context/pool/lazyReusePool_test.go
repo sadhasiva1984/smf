@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/free5gc/smf/internal/context/pool"
+	"github.com/sadhasiva1984/smf/internal/context/pool"
 )
 
 func TestNewLazyReusePool(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/sadhasiva1984/openapi/models"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 var configuration = &factory.UserPlaneInformation{

@@ -9,9 +9,9 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 
 	"github.com/free5gc/pfcp/pfcpType"
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/sadhasiva1984/nas/nasMessage"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 var mockIPv4NodeID = &pfcpType.NodeID{

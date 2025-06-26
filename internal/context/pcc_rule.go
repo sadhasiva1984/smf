@@ -7,11 +7,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/smf/internal/logger"
-	"github.com/free5gc/smf/pkg/factory"
 	"github.com/free5gc/util/flowdesc"
 	"github.com/sadhasiva1984/nas/nasType"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/logger"
+	"github.com/sadhasiva1984/smf/pkg/factory"
 )
 
 // PCCRule - Policy and Charging Rule

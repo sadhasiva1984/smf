@@ -4,10 +4,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/free5gc/smf/internal/logger"
 	"github.com/sadhasiva1984/openapi"
 	"github.com/sadhasiva1984/openapi/models"
 	"github.com/sadhasiva1984/openapi/smf/PDUSession"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 type nsmfService struct {

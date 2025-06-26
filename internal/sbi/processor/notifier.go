@@ -7,11 +7,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	smf_context "github.com/free5gc/smf/internal/context"
-	"github.com/free5gc/smf/internal/logger"
 	"github.com/sadhasiva1984/openapi"
 	"github.com/sadhasiva1984/openapi/models"
 	"github.com/sadhasiva1984/openapi/smf/EventExposure"
+	smf_context "github.com/sadhasiva1984/smf/internal/context"
+	"github.com/sadhasiva1984/smf/internal/logger"
 )
 
 func (p *Processor) HandleChargingNotification(

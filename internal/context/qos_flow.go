@@ -2,10 +2,10 @@ package context
 
 import (
 	"github.com/free5gc/aper"
-	"github.com/free5gc/smf/internal/util"
 	"github.com/sadhasiva1984/nas/nasType"
 	"github.com/sadhasiva1984/ngap/ngapType"
 	"github.com/sadhasiva1984/openapi/models"
+	"github.com/sadhasiva1984/smf/internal/util"
 )
 
 // QoSFlow  - Policy and Charging Rule
